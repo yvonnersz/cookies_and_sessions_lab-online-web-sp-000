@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   def index
   end
 
-  def new
+  def add_to_cart
+    session[:cart] << params[:product]
   end
 end
